@@ -41,7 +41,7 @@ NSObject *CoremlConvert::convertFromDeviceType(const base::DeviceType &src) {
     case base::kDeviceTypeCodeVulkan:  // review： 属于default会不会更好呀
       type = reinterpret_cast<NSObject *>(new MLGPUComputeDevice());
       break;
-    case base::kDeviceTypeCodeNpu:
+    case base::kDeviceTypeCodeAppleNpu:
       type = reinterpret_cast<NSObject *>(new MLNeuralEngineComputeDevice());
       break;
     default:
